@@ -40,7 +40,7 @@ func TestImportOverride(t *testing.T) {
 func TestDriverSetFromEnvironmentVariable(t *testing.T) {
 
 	databaseUrlEnvVariableKey := "DB_DRIVER"
-	databaseUrlEnvVariableVal := "sqlite3"
+	databaseUrlEnvVariableVal := "postgres"
 	databaseOpenStringKey := "DATABASE_URL"
 	databaseOpenStringVal := "db.db"
 
@@ -53,7 +53,7 @@ func TestDriverSetFromEnvironmentVariable(t *testing.T) {
 	}
 
 	got := reflect.TypeOf(dbconf.Driver.Dialect)
-	want := reflect.TypeOf(&Sqlite3Dialect{})
+	want := reflect.TypeOf(&PostgresDialect{})
 
 	if got != want {
 		t.Errorf("Not able to read the driver type from environment variable."+

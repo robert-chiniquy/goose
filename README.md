@@ -1,3 +1,7 @@
+# HACK ALERT
+
+This is a fork of https://bitbucket.org/liamstask/goose with all references to sqlite removed. This is useful when you are using goose as a library with not-sqlite and want to cross-compile.
+
 # goose
 
 goose is a database migration tool.
